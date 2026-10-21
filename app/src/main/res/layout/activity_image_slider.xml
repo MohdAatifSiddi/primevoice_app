@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation_bar_view">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium">
+
+            <ImageButton
+                android:id="@+id/lyt_save"
+                android:layout_width="@dimen/spacing_xxlarge"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_save" />
+
+            <ImageButton
+                android:id="@+id/lyt_close"
+                android:layout_width="@dimen/spacing_xxlarge"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_close_white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:textColor="@color/color_white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navigation_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

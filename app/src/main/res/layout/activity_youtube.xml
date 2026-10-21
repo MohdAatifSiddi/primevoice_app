@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation_bar_view">
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+        <FrameLayout
+            android:id="@+id/full_screen_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/panel_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/custom_controls_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="4dp">
+
+                <ImageButton
+                    android:id="@+id/btn_rew_10s"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_10s_rew"
+                    android:visibility="invisible" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_play_pause"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_exo_pause"
+                    android:visibility="invisible" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_ffwd_10s"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_10s_ffwd"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.customui.views.YouTubePlayerSeekBar
+                    android:id="@+id/youtube_player_seekbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:color="@color/gnt_red"
+                    app:fontSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/btn_fullscreen"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/img_content_description"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_exo_fullscreen_open" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:indeterminateDuration="1000"
+                android:indeterminateTint="@color/color_white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navigation_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

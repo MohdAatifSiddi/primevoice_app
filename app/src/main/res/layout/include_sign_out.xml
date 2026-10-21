@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_login_register"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="@dimen/spacing_medium">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_profile2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="4dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_user_account"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Image.Circular" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_toEndOf="@+id/img_profile2">
+
+        <TextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-4dp"
+            android:text="@string/txt_profile_welcome"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+            android:textSize="@dimen/title_size_large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_not_registered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_welcome"
+            android:paddingTop="@dimen/spacing_xxsmall"
+            android:paddingBottom="@dimen/spacing_xxsmall"
+            android:text="@string/txt_profile_not_registered" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_welcome"
+            android:layout_toEndOf="@+id/txt_not_registered"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="@dimen/rounded_corner_radius"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            app:cardPreventCornerOverlap="false">
+
+            <TextView
+                android:id="@+id/txt_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:foreground="?selectableItemBackground"
+                android:paddingStart="@dimen/spacing_medium"
+                android:paddingTop="@dimen/spacing_xxsmall"
+                android:paddingEnd="@dimen/spacing_medium"
+                android:paddingBottom="@dimen/spacing_xxsmall"
+                android:text="@string/txt_profile_register_now"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="@dimen/rounded_corner_radius"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:cardPreventCornerOverlap="false">
+
+        <TextView
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:foreground="?selectableItemBackground"
+            android:paddingStart="@dimen/spacing_medium"
+            android:paddingTop="@dimen/spacing_xxsmall"
+            android:paddingEnd="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_xxsmall"
+            android:text="@string/txt_profile_login"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+            android:textColor="@color/color_light_primary"
+            android:textSize="@dimen/title_size_medium"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

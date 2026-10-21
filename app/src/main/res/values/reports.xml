@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="dialog_report_post">
+        <item>Misleading or sensational</item>
+        <item>Violent or repulsive</item>
+        <item>Hateful or abusive</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="dialog_report_comment">
+        <item>I disagree with this user</item>
+        <item>Targeted harassment</item>
+        <item>Spam</item>
+        <item>Inappropriate profile</item>
+        <item>Threatening content</item>
+        <item>Impersonation</item>
+        <item>Private information</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

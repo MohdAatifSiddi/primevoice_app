@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "93558122405",
+    "project_id": "solodroid-project-example",
+    "storage_bucket": "solodroid-project-example.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93558122405:android:b50427525e52dae4660331",
+        "android_client_info": {
+          "package_name": "com.app.androidnewsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmQGxf1CWHhm7FriB1LQBDGX9kJkFDv3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation_bar_view">
+
+        <ViewStub
+            android:id="@+id/header_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?actionBarSize"
+            android:padding="6dp">
+
+            <RelativeLayout
+                android:id="@+id/lyt_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <RelativeLayout
+                            android:id="@+id/lyt_img_profile"
+                            android:layout_width="144dp"
+                            android:layout_height="144dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp">
+
+                            <RelativeLayout
+                                android:layout_width="144dp"
+                                android:layout_height="144dp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/profile_image"
+                                    android:layout_width="144dp"
+                                    android:layout_height="144dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_user_account"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Image.Circular" />
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/tmp_image"
+                                    android:layout_width="144dp"
+                                    android:layout_height="144dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:scaleType="centerCrop"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Image.Circular" />
+
+                            </RelativeLayout>
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:id="@+id/btn_change_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:src="@drawable/ic_camera_white"
+                                app:backgroundTint="?colorPrimary"
+                                app:elevation="0dp"
+                                app:fabCustomSize="54dp"
+                                app:fabSize="normal"
+                                app:pressedTranslationZ="0dp"
+                                app:tint="@color/color_white" />
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/item_post_padding_medium">
+
+                            <EditText
+                                android:id="@+id/edt_user"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_edt_name"
+                                android:drawablePadding="12dp"
+                                android:hint="@string/edt_name"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <EditText
+                                android:id="@+id/edt_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_edt_email"
+                                android:drawablePadding="12dp"
+                                android:hint="@string/edt_email"
+                                android:inputType="textEmailAddress" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/edt_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_edt_password"
+                                android:drawablePadding="12dp"
+                                android:hint="@string/edt_password"
+                                android:inputType="textPassword" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_update"
+                            style="@style/MaterialButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/button_height"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/btn_update_data" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_change_password"
+                            style="@style/MaterialButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/button_height"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/btn_change_password" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_logout"
+                            style="@style/MaterialButtonStyleDanger"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/button_height"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/btn_logout" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_delete_account"
+                            style="@style/MaterialButtonStyleDanger"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/button_height"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/btn_delete_account" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navigation_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

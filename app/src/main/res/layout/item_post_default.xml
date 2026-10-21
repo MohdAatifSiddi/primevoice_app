@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:foreground="?selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/item_post_padding_medium"
+    android:paddingTop="@dimen/item_post_padding_small"
+    android:paddingRight="@dimen/item_post_padding_medium"
+    android:paddingBottom="@dimen/item_post_padding_small">
+
+    <RelativeLayout
+        android:layout_width="@dimen/post_thumbnail_width"
+        android:layout_height="@dimen/post_thumbnail_height">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Image.Rounded" />
+
+        <ImageView
+            android:id="@+id/thumbnail_video"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:alpha="0.9"
+            android:src="@drawable/ic_thumbnail_video"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_post_padding_medium"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="News Title News Title News Title News Title News Title"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+            android:textSize="@dimen/post_primary_font_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/excerpt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingStart="0dp"
+                android:paddingEnd="3dp"
+                android:text="short description short description short description short description "
+                android:textSize="@dimen/post_secondary_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lyt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_date"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/ic_time"
+                        app:tint="@color/color_grey_dark" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="2 weeks ago"
+                        android:textSize="@dimen/post_secondary_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_comment"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_comment"
+                        app:tint="@color/color_grey_dark" />
+
+                    <TextView
+                        android:id="@+id/comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="2"
+                        android:textSize="@dimen/post_secondary_font_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_overflow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="1dp"
+                    android:src="@drawable/ic_dots"
+                    app:tint="@color/color_light_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

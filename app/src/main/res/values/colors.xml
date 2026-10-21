@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--default theme color-->
+    <color name="color_light_primary">#2196F3</color>
+    <color name="color_light_status_bar">#1E88E5</color>
+    <color name="color_light_accent">#4aafff</color>
+    <color name="color_light_background">#FFFFFF</color>
+    <color name="color_light_bottom_navigation">#EFF4F8</color>
+    <color name="color_light_icon">#49454F</color>
+    <color name="color_light_text">#49454F</color>
+    <color name="color_light_search_bar">#DEF1FF</color>
+    <color name="color_light_native_ad_background">#F3F2F3</color>
+    <color name="color_light_active_indicator">#C7E6FF</color>
+
+    <!--dark theme color-->
+    <color name="color_dark_status_bar">#101D24</color>
+    <color name="color_dark_toolbar">#101D24</color>
+    <color name="color_dark_accent">#4aafff</color>
+    <color name="color_dark_background">#101D24</color>
+    <color name="color_dark_bottom_navigation">#222D36</color>
+    <color name="color_dark_icon">#BDC0C3</color>
+    <color name="color_dark_text">#BDC0C3</color>
+    <color name="color_dark_search_bar">#222D36</color>
+    <color name="color_dark_native_ad_background">#222D36</color>
+    <color name="color_dark_active_indicator">#384756</color>
+
+    <!--others-->
+    <color name="color_dialog_background_light">#ECE7F1</color>
+    <color name="color_dialog_background_light_navigation_bar">#77797B</color>
+    <color name="color_dialog_background_dark">#2C2930</color>
+    <color name="color_stroke_native_ad">#2196F3</color>
+    <color name="color_shimmer">#BCBEC1</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_red">#F44336</color>
+    <color name="color_grey_soft">#BCBEC1</color>
+    <color name="color_grey_medium">#96989A</color>
+    <color name="color_grey_dark">#797979</color>
+    <color name="color_category">#4aafff</color>
+    <color name="color_ripple">#636363</color>
+    <color name="color_overlay_soft">#1A000000</color>
+    <color name="color_overlay_dark">#33000000</color>
+
+</resources>
